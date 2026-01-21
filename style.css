@@ -26,8 +26,12 @@
 .todos-input, .todo {
     min-height: 64px;
 
-    /* TODO: Fix multiple borders colliding */
     border: 1px solid var(--secondary-color);
+}
+
+.todo {
+    /* Fix borders colliding */
+    margin-top: -1px;
 }
 
 .vertical-container {
