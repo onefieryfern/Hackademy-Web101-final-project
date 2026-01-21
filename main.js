@@ -34,6 +34,19 @@ function addToList (event) {
 
     const list = document.getElementById("todos-items");
     list.appendChild(htmlItem);
+
+    // Update item count
+    const listLength = list.children.length;
+
+    let counterText = listLength;
+    if (listLength == 1) {
+        counterText += " item left";
+    } else {
+        counterText += " items left";
+    }
+
+    const counter = document.getElementById("item-count");
+    counter.innerText = counterText;
 }
 
 const mainInputBox = document.getElementById("input-box");
