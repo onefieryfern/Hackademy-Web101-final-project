@@ -1,12 +1,14 @@
 // List functionality
+/*
 class Item {
     constructor(text) {
         this.text = text;
         this.type = "active";
     }
 }
+*/
 
-let todoList = [];
+// let todoList = [];
 
 function addToList (event) {
     if (event.type != "blur" && event.code != "Enter") {
@@ -19,7 +21,7 @@ function addToList (event) {
     }
 
     // Add item to the internal list
-    todoList.push(new Item(text));
+    // todoList.push(text);
 
     // Clear input box
     mainInputBox.value = "";
