@@ -1,0 +1,52 @@
+:root {
+    --primary-color: brown;
+    --secondary-color: black;
+}
+
+.title {
+    font-family: sans-serif;
+    text-align: center;
+
+    font-size: 60pt;
+
+    color: var(--primary-color);
+}
+
+.small-footer {
+    font-family: sans-serif;
+    text-align: center;
+
+    font-size: 10pt;
+}
+
+.todos {
+    width: 1024px;
+}
+
+.todos-input, .todo {
+    min-height: 64px;
+
+    /* TODO: Fix multiple borders colliding */
+    border: 1px solid var(--secondary-color);
+}
+
+.vertical-container {
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 32px;
+}
+
+.horizontal-container {
+    display: flex;
+
+    flex-direction: row;
+    justify-content: center;
+
+    gap: 5%;
+
+    padding-left: 10%;
+    padding-right: 10%;
+}
