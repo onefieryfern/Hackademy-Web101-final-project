@@ -1,10 +1,16 @@
 :root {
     --primary-color: brown;
     --secondary-color: black;
+
+    --background-color: white;
 }
 
 * {
     font-family: sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
 }
 
 .title {
