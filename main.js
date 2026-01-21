@@ -10,6 +10,11 @@ class Item {
 
 // let todoList = [];
 
+const mainInputBox = document.getElementById("input-box");
+
+mainInputBox.addEventListener("blur", addToList);
+mainInputBox.addEventListener("keydown", addToList);
+
 function addToList (event) {
     if (event.type != "blur" && event.code != "Enter") {
         return;
@@ -36,7 +41,11 @@ function addToList (event) {
     list.appendChild(htmlItem);
 
     // Update item count
-    const listLength = list.children.length;
+    updateCounter();
+}
+
+function updateCounter() {
+    const listLength = document.getElementById("todos-items").children.length;
 
     let counterText = listLength;
     if (listLength == 1) {
@@ -48,8 +57,3 @@ function addToList (event) {
     const counter = document.getElementById("item-count");
     counter.innerText = counterText;
 }
-
-const mainInputBox = document.getElementById("input-box");
-
-mainInputBox.addEventListener("blur", addToList);
-mainInputBox.addEventListener("keydown", addToList);
