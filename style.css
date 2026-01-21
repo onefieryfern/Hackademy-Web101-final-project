@@ -93,7 +93,7 @@ body {
 
 .tab {
     border: none;
-    
+
     /* Visual magic so the buttons don't jump around */
     margin-left: var(--border-size);
     margin-right: var(--border-size);
@@ -107,4 +107,19 @@ body {
 .tab-focused, .tab:hover {
     border: var(--border-size) solid var(--primary-color);
     border-radius: 5px;
+}
+
+/* Custom buttons */
+
+.button-like-text {
+    border: none;
+    background-color: var(--background-color);
+
+    cursor: pointer;
+}
+
+/* Other */
+
+.hide {
+    visibility: hidden;
 }
