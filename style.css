@@ -23,36 +23,53 @@
 
 .todos {
     width: 1024px;
+
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.todos-input, .todo, .todos-footer {
+    border: 1px solid var(--secondary-color);
 }
 
 .todos-input, .todo {
     min-height: 64px;
-
-    border: 1px solid var(--secondary-color);
 }
 
-.todo {
+.todos-footer {
+    height: 32px;
+}
+
+.todo, .todos-footer {
     /* Fix borders colliding */
     margin-top: -1px;
 }
 
+/* Basic flex containers */
 .vertical-container {
     display: flex;
-
     flex-direction: column;
-    justify-content: center;
-
-    gap: 32px;
 }
 
 .horizontal-container {
     display: flex;
-
     flex-direction: row;
+}
+
+/* Classes for flex containers */
+.flex-center {
     justify-content: center;
+}
 
-    gap: 5%;
+.flex-pad {
+    padding-left: 32px;
+    padding-right: 32px;
+}
 
-    padding-left: 10%;
-    padding-right: 10%;
+.flex-small-gap-dynamic {
+    gap: 1%;
+}
+
+.flex-medium-gap {
+    gap: 32px;
 }
