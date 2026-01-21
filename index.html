@@ -9,13 +9,27 @@
     <script src="main.js" defer></script>
 </head>
 <body>
-    <div class="vertical-container">
+    <div class="vertical-container flex-medium-gap">
         <div class="title">todos</div>
 
-        <div class="horizontal-container">
+        <div class="horizontal-container flex-center">
             <div class="todos">
-                <div class="todos-input"></div>
+                <div class="todos-input">
+                    <input type="text" />
+                </div>
+
                 <!-- <div class="todo"></div> -->
+                 
+                <div class="todos-footer horizontal-container">
+                    <div class="horizontal-container flex-pad">
+                        <div id="item-count" style="width: max-content;">X item(s) left</div>
+                    </div>
+                    <div class="horizontal-container flex-center flex-small-gap-dynamic" style="width: 100%;">
+                        <button id="tab-all">All</button>
+                        <button id="tab-active">Active</button>
+                        <button id="tab-completed">Completed</button>
+                    </div>
+                </div>
             </div>
         </div>
 
