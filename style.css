@@ -79,3 +79,31 @@ body {
 .flex-medium-gap {
     gap: 32px;
 }
+
+/* Buttons for tabbing */
+
+.tab, .tab-focused {
+    background-color: var(--background-color);
+
+    cursor: pointer;
+
+    --border-size: 1px;
+}
+
+.tab {
+    border: none;
+    
+    /* Visual magic so the buttons don't jump around */
+    margin-left: var(--border-size);
+    margin-right: var(--border-size);
+}
+
+.tab:hover {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.tab-focused, .tab:hover {
+    border: var(--border-size) solid var(--primary-color);
+    border-radius: 5px;
+}
