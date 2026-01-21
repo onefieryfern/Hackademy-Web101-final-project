@@ -3,8 +3,11 @@
     --secondary-color: black;
 }
 
-.title {
+* {
     font-family: sans-serif;
+}
+
+.title {
     text-align: center;
 
     font-size: 60pt;
@@ -13,7 +16,6 @@
 }
 
 .small-footer {
-    font-family: sans-serif;
     text-align: center;
 
     font-size: 10pt;
