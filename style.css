@@ -123,3 +123,7 @@ body {
 .hide {
     visibility: hidden;
 }
+
+.todo, #item-count {
+    cursor: default;
+}
