@@ -103,6 +103,10 @@ body {
     --border-size: 1px;
 }
 
+.tab:focus, .tab-focused:focus {
+    box-shadow: 0px 0px 4px 2px var(--primary-color);
+}
+
 .tab {
     border: none;
 
