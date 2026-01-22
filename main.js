@@ -1,6 +1,9 @@
 const mainInputBox = document.getElementById("input-box");
 const list = document.getElementById("todos-items");
 
+const counter = document.getElementById("item-count");
+const footer = document.getElementById("todos-footer");
+
 mainInputBox.addEventListener("blur", addToList);
 mainInputBox.addEventListener("keydown", addToList);
 
@@ -38,6 +41,11 @@ function updateCounter() {
         counterText += " items left";
     }
 
-    const counter = document.getElementById("item-count");
     counter.innerText = counterText;
+
+    if (listLength > 0) {
+        footer.classList.remove("hide");
+    } else {
+        footer.classList.add("hide");
+    }
 }
