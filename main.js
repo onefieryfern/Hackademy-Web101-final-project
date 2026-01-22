@@ -18,29 +18,48 @@ function addToList (event) {
     }
 
     mainInputBox.value = "";
-    
+
     addListItem(text);
     updateCounter();
 }
 
+function removeFromList(event) {
+    const item = event.target;
+    item.parentElement.parentElement.remove();
+    updateCounter();
+}
+
 function addListItem (text) {
+    // Create the parent node
     const item = document.createElement("div");
     item.classList.add("todo");
     item.classList.add("horizontal-container");
 
+    // The <div> for the checkbox
     const checkboxDiv = document.createElement("div");
     checkboxDiv.classList.add("check");
     item.appendChild(checkboxDiv);
 
+    // The <div> for the text
     const textDiv = document.createElement("div");
     textDiv.classList.add("text");
     textDiv.appendChild(document.createTextNode(text));
     item.appendChild(textDiv);
 
+    // The <div> for the clear button
     const clearDiv = document.createElement("div");
     clearDiv.classList.add("clear");
+
+    const clearButton = document.createElement("button");
+    clearButton.classList.add("button-like-text");
+    clearButton.innerText = "X";
+    clearDiv.appendChild(clearButton);
+
+    clearButton.addEventListener("click", removeFromList);
+
     item.appendChild(clearDiv);
 
+    // Add the created node to the html page
     list.appendChild(item);
 }
 
