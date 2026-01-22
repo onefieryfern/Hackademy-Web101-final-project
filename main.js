@@ -17,18 +17,31 @@ function addToList (event) {
         return;
     }
 
-    // Clear input box
     mainInputBox.value = "";
-
-    // Add item to the shown list
-    const htmlItem = document.createElement("div");
-    htmlItem.classList.add("todo");
-    htmlItem.appendChild(document.createTextNode(text));
-
-    list.appendChild(htmlItem);
-
-    // Update item count
+    
+    addListItem(text);
     updateCounter();
+}
+
+function addListItem (text) {
+    const item = document.createElement("div");
+    item.classList.add("todo");
+    item.classList.add("horizontal-container");
+
+    const checkboxDiv = document.createElement("div");
+    checkboxDiv.classList.add("check");
+    item.appendChild(checkboxDiv);
+
+    const textDiv = document.createElement("div");
+    textDiv.classList.add("text");
+    textDiv.appendChild(document.createTextNode(text));
+    item.appendChild(textDiv);
+
+    const clearDiv = document.createElement("div");
+    clearDiv.classList.add("clear");
+    item.appendChild(clearDiv);
+
+    list.appendChild(item);
 }
 
 function updateCounter() {

@@ -52,6 +52,18 @@ body {
     margin-top: -1px;
 }
 
+.todo {
+    .check {
+        width: 64px;
+    }
+    .text {
+        width: 100%;
+    }
+    .clear {
+        width: 64px;
+    }
+}
+
 /* Basic flex containers */
 .vertical-container {
     display: flex;
