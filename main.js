@@ -1,16 +1,5 @@
-// List functionality
-/*
-class Item {
-    constructor(text) {
-        this.text = text;
-        this.type = "active";
-    }
-}
-*/
-
-// let todoList = [];
-
 const mainInputBox = document.getElementById("input-box");
+const list = document.getElementById("todos-items");
 
 mainInputBox.addEventListener("blur", addToList);
 mainInputBox.addEventListener("keydown", addToList);
@@ -21,12 +10,9 @@ function addToList (event) {
     }
 
     const text = mainInputBox.value;
-    if (text == "") {
+    if (text === "") {
         return;
     }
-
-    // Add item to the internal list
-    // todoList.push(text);
 
     // Clear input box
     mainInputBox.value = "";
@@ -34,10 +20,8 @@ function addToList (event) {
     // Add item to the shown list
     const htmlItem = document.createElement("div");
     htmlItem.classList.add("todo");
-
     htmlItem.appendChild(document.createTextNode(text));
 
-    const list = document.getElementById("todos-items");
     list.appendChild(htmlItem);
 
     // Update item count
@@ -45,10 +29,10 @@ function addToList (event) {
 }
 
 function updateCounter() {
-    const listLength = document.getElementById("todos-items").children.length;
+    const listLength = list.children.length;
 
     let counterText = listLength;
-    if (listLength == 1) {
+    if (listLength === 1) {
         counterText += " item left";
     } else {
         counterText += " items left";
